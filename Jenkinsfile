@@ -4,19 +4,17 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/lukus999/jenk.git'
+                git branch: 'main', url: 'https://github.com/lukus999/jenk.git'
             }
         }
         stage('Build') {
             steps {
-                echo 'Building project...'
-                // Add your build steps here
+                sh 'javac hello.java'
             }
         }
         stage('Run') {
             steps {
-                echo 'Running project...'
-                // Add your run steps here
+                sh 'java hello'
             }
         }
     }
