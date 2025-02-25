@@ -1,4 +1,4 @@
-public class Fibonacci {
+public class hello {
 
     // Function to generate Fibonacci sequence up to n numbers
     public static int[] generateFibonacci(int n) {
